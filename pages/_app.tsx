@@ -3,7 +3,7 @@ import { Hydrate, QueryClient, QueryClientProvider } from 'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools'
 import type { AppProps } from 'next/app'
 
-import 'styles/globals.css'
+import 'styles/globals.scss'
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   const queryClient = useRef(new QueryClient())

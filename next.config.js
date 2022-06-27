@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+const path = require('path')
 
 module.exports = {
   webpack(config) {
@@ -10,4 +11,8 @@ module.exports = {
     return config
   },
   reactStrictMode: true,
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'styles')],
+    prependData: '@use "main" as *;',
+  },
 }
